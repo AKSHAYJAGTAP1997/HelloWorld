@@ -1,0 +1,55 @@
+class don{
+	
+ void p1(){
+	  
+	  System.out.println("aniket is here");
+	  
+  }
+  
+ 
+  static {
+	  
+	  System.out.println("vipul is here");
+  }
+	
+}	
+	
+	
+	class Main{
+		
+		
+		int i=101;//refrence variable 
+		int j=111;// refrence variable
+		
+		static int s=420;
+		
+		static void bond(){
+			System.out.println(s);
+			System.out.println("james bond");
+		}
+		
+		 void demo(){
+	  
+	  System.out.println("DONE DONE ACESS");
+	  
+  }
+		
+		public static void main(String a[]){
+			
+			System.out.println("inside main maithod ");
+			
+			
+			bond();
+			 Main m=new Main();
+			System.out.println(m.i);
+			System.out.println(m.j);
+			
+			m.demo();
+			
+			don d =new don();
+			//System.out.println(don.p1);
+			
+			d.p1();
+			//don.p1();
+		}
+	}

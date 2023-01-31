@@ -1,0 +1,13 @@
+ import java.util.*;
+    class aj
+    {
+        public static void main(String args[]) 
+        {
+            aj obj = new aj();
+            obj.add("A");
+            obj.add("B");
+            obj.add("C");
+            obj.add(1, "D");
+            System.out.println(obj);
+        }
+    }

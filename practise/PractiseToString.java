@@ -1,0 +1,25 @@
+ class Employee{
+	
+	int id =10;
+	@Override
+	public String toString(){
+		return ("id"+ id);
+	}
+	
+	
+	
+}
+
+public class PractiseToString{
+	
+	public static void main(String[] args){
+		
+		Employee e=new Employee();
+		
+		System.out.println(e);
+		
+		
+	}
+	
+	
+}

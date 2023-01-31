@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class Abcd
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter size of array");
+		
+		int x, i,j;
+		int y=sc.nextInt();
+		
+		System.out.println("enter element of array");
+		int arr[]=new int[y];
+		for(int z=0;z<y;z++)
+		{
+			arr[z]=sc.nextInt();
+		}
+		
+		
+		for(i=0;i<arr.length;i++)
+		{
+			x=-1;
+			for(j=i+1;j<arr.length;j++)
+			{
+				if(arr[i]<arr[j])
+				{
+					x=arr[i];
+				break;
+				}
+			}
+			
+			
+				
+			System.out.println(arr[i]+" , "+x);
+			
+		}
+	}
+}

@@ -1,0 +1,25 @@
+class A{
+	int i;
+	A avar;
+}
+
+
+class CircularRefDemo{
+	
+	
+	public static void main(String[] args){
+		A a1 = new A();
+		A a2 = new A();
+		A a3 = new A();
+		
+		a1.avar = a3;
+		a3.avar = a2;
+		a2.avar = a1;
+		
+		a1 = null;
+		a2 = null;
+		a3 = null;
+		
+	
+	}
+}

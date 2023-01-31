@@ -1,0 +1,35 @@
+   import java.util.*;
+   
+   class akshay
+   {
+	   int age;
+	   int num;
+	   String name;
+	   String skill;
+	   
+	   akshay(int ag,int number,String nam,String sk)
+	   {  
+	   this.age=ag;
+	   this.num=number;
+	   this.name=nam;
+	   this.skill=sk;
+	   System.out.println("AGE ="+age);
+	   System.out.println("NUM ="+num);
+	   System.out.println("name "+name);
+	   System.out.println("skill  "+skill);
+	   }
+	   
+	   public static void main(String args[])
+	   {
+		   akshay a=new akshay(21,9,"akshay","batsman");
+		    akshay a1=new akshay(22,19,"akshay1","batsman1");
+			 akshay a2=new akshay(23,29,"akshay2","batsman2"); 
+			  akshay a3=new akshay(24,39,"akshay3","batsman3");
+			  akshay a4=new akshay(25,49,"akshay4","batsman4");
+	   }
+   }
+   
+		   
+	   
+		   
+	   

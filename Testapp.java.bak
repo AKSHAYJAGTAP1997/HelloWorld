@@ -1,0 +1,73 @@
+ /*class TestApp {
+    public static void main(String[] args) {
+        for (int index = 0; 1; index++) {
+            System.out.println("Welcome");
+            break;
+        }
+    }
+}
+*/
+
+
+
+/*class TestApp {
+    public static void main(String[] args) {
+        for (int index = 0; true; index++) {
+            System.out.println("Welcome");
+            break;
+        }
+    }
+}
+*/
+
+
+
+/*class TestApp {
+
+    String args[] = { "1", "2" };
+
+    public static void main(String args[]) {
+        if (args.length > 0)
+            System.out.println(args.length);
+    }
+}*/
+
+
+  
+  /*class TestApp {
+
+    public static void main() {
+        int odd = 1;
+        if (odd) {
+            System.out.println("odd");
+        } else {
+            System.out.println("even");
+        }
+    }
+}
+*/
+
+
+
+
+class TestApp {
+
+    public static void main(String args[])
+	{
+        System.out.println(test());
+    }
+
+    static float test() {
+       /// static float x = 0.0;
+	   //float x = 0.0;
+	   float x = 1.45f;
+	   // return x++;
+       return ++x;
+    }
+}
+
+
+
+
+
+

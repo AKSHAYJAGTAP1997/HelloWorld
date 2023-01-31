@@ -1,0 +1,23 @@
+package Anil;
+//import java.util.*;
+//import java.io.*;
+
+public class Aj
+{
+	public static void m1()
+	{
+		System.out.println("parent class m1");
+	}
+	
+	public static void main(String[] args)
+	{
+		Aj2 a =new Aj2();
+		System.out.println("see which m1 is called??");
+		a.m1();
+		System.out.println("see which m1 is called??");
+		m1();
+	}
+}
+
+
+		

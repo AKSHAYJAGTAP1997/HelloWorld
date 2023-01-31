@@ -1,0 +1,43 @@
+import java.lang.NumberFormatException;
+import java.util.Scanner;
+
+public class ExceptionHandling5 {
+	static int age;
+
+	public static void main(String[] args)   {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter name");
+		
+			String name = sc.next();
+			try {
+			 age = Integer.parseInt(name);
+			
+			}
+		
+
+		 catch (NumberFormatException d) {
+			System.out.println("Entered input is not a valid format for an integer.");
+			//e.printStackTrace();
+		 
+			try{if(age >=18 && age < 60)
+
+				throw new InvalidAgeException("Invalid Age");
+			System.out.println("Name: "+name+" Age: "+age);
+			
+			}
+			
+		catch (InvalidAgeException e)
+		{
+
+			System.out.println(e);
+		}
+		
+		
+		
+		
+
+	}
+
+}
+
+}

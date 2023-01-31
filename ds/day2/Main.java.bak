@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Main
+{
+ 
+    public static void main (String[] args)
+    {
+		HashMap<String,Integer> map= new HashMap<>();
+		
+		map.put("Akshay",10);
+		
+		map.put("Abhi",20);
+		
+		map.put("ram",30);
+		
+		System.out.println("Size of map is "+map.size());
+
+		if(map.containsKey("Akshay")){
+			System.out.println("Akshay is "+map.get("Akshay"));
+		}
+	
+	
+       
+    }
+}

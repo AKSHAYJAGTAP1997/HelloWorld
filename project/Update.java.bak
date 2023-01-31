@@ -1,0 +1,61 @@
+
+import java.util.*;
+
+class Update{
+
+static class Student
+{
+	String name;
+	int marks, prev_rank;
+	
+	Student()
+	{
+		this.marks = 0;
+		this.prev_rank = 0;
+	}
+}
+	
+static void nameRank(String names[], int marks[],int updates[], int n)
+{
+	
+	// Array of students
+	Student x[] = new Student[n];
+
+	for(int i = 0; i < n; i++)
+	{
+		x[i] = new Student();
+		x[i].name = names[i];
+
+		// Update the marks of the student
+		
+		x[i].marks = marks[i] + updates[i];
+		System.out.println(x[i].marks);
+
+		// Store the current rank of the student
+		x[i].prev_rank = i + 1;
+	}
+
+
+}
+
+// Driver code
+public static void main(String[] args)
+{
+	
+	
+	String names[] = { "DEVI DINESH", "AKSHAY", "ANIKET" };
+	
+	int marks[] = {77,88,55};
+	
+	
+	// Updates that are to be done
+	int updates[] = { 11,-10,12 };
+	
+	// Number of students
+	int n = marks.length;
+	
+	nameRank(names, marks, updates, n);
+}
+}
+
+

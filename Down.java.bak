@@ -1,0 +1,57 @@
+class XX
+{
+	void m1()
+	{
+		System.out.println("m1(): XX");
+	}
+}
+
+class XY extends XX
+{
+	void m1()
+	{
+	}
+	
+	void m2()
+	{
+	}
+	
+}
+
+class XZ extends XX
+{
+	void m1()
+	{
+	}
+	
+	void m2()
+	{
+	}
+	 void m3()
+	 {
+	 }
+}
+
+class Down
+{
+	public static void main(String[] args)
+	{
+		XX x=new XX();
+	//	XY y=(XY)x;
+		XZ z=(XZ)x;
+		
+		x.m1();
+		//y.m1();
+		//y.m2();
+		z.m1();
+		z.m2();
+		z.m3();
+		Object o=new XZ();
+		
+		XX x1=(XX)o;
+		x1.m1();
+	}
+}
+
+
+	

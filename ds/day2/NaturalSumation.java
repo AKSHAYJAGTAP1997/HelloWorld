@@ -1,0 +1,25 @@
+class NaturalSumation
+{
+	static  void sum(int i,int n, int sum)
+	{
+	if(i == n)
+	{
+		sum+=i;
+		System.out.println(sum);
+		return;
+	}
+	
+	sum+=i;
+	 sum(i+1,n,sum);
+	}
+	
+	public static void main(String[] args)
+	{int i=1;
+	int sum=0;
+	int n=5;
+	sum(1,5,0);
+		
+	}
+	
+	
+}

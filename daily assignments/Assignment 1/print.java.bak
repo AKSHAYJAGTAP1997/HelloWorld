@@ -1,0 +1,108 @@
+import java.util.*;
+
+
+class even
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER YOUR NUMBER");
+		int n=sc.nextInt();
+		if(n%2==0)
+		{
+			System.out.println("NUMBER IS EVEN");
+		}
+		else 
+		{
+			System.out.println("NUMBER IS ODD");
+		}
+	}
+}
+
+		
+		
+	class factorial1
+{
+	public static void main(String args[])
+	{
+		int fact=1;
+		for(int i=1;i<=5; i++)
+		{
+			fact=fact*i;
+		}
+		
+			System.out.println(fact+"");
+	}
+}
+
+class swap
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER NUMBER WHICH IS SWAPPED");
+		double n1=sc.nextDouble();
+		double n2=sc.nextDouble();
+		
+		n1=n1-n2;
+		n2=n1+n2;
+		n1=n2-n1;
+		System.out.println("SWAPEED NUMBER ARE="+n1+ " & " +n2);
+	}
+}
+
+class findnum
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("ENTER YOUR NUMBER");
+		double d=sc.nextDouble();
+		if(d>0)
+		{
+			System.out.println("number is positive");
+		}
+		else if (d<0)
+		{ 
+	System.out.println("number is negative");
+		}
+		else if (d==0)
+		{
+		System.out.println("number is zero");
+		}
+		System.out.println();
+	}
+}
+//Write a Java Program to find whether given number is Leap year or NOT? 			
+
+class leap
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER YOUR YEAR");
+		double n1=sc.nextDouble();
+		if(((n1%400==0)||(n1%100!=0))&&(n1%4==0))
+		{
+			System.out.println("ENTERD YEAR IS LEAP");
+		}
+		else
+		{
+			System.out.println("ENTERD YEAR IS NOT A LEAP YEAR");
+		}
+	}
+}
+
+//	Write a Java Program to Print 1 To 10 Without Using Loop.	
+
+class print
+{
+	public static void main(String args[])
+	{
+		int a=0;
+		a<=10;
+		a++;
+		System.out.println("1 TO 10= "+a);
+	}
+}
+

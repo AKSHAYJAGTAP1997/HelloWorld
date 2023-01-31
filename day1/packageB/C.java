@@ -1,0 +1,15 @@
+package packageB;
+class C
+{
+	public static void main(String[] Akshay)
+	{
+	D d=new D();
+	System.out.println(d.x);
+	System.out.println(d.y);
+	System.out.println(d.w);
+	d.m5();
+	d.m6();
+	d.m7();
+}
+}
+

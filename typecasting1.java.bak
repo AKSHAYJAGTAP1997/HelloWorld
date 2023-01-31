@@ -1,0 +1,10 @@
+class typecasting1
+{
+	public static void main(String args[])
+	{
+		float f=123.12345678F;
+		int i= (int)f;
+		System.out.println(f);
+		System.out.println(i);
+	}
+}

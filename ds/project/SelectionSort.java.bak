@@ -1,0 +1,40 @@
+class SelectionSort
+{
+	public static void main(String[] args)
+	{
+		
+		int a[]={4,99,77,66,88};
+		int temp=0;
+		
+		int min=0;
+		for(int i=0;i<a.length;i++)
+		{
+			min=i;// for storing  value of i 
+			for(int j=i+1;j<a.length;j++)//i+1 bcause exceprt zero index compare all values
+
+			{
+				
+				if(a[j] < a[min])
+				{
+					min=j;//index position of j insert in min
+				}
+				
+				
+			}
+//swapping of number			
+			temp=a[i];
+			a[i]=a[min];
+			a[min]=temp;
+			
+		}
+	for(int z=0;z<a.length;z++)
+	{		
+		System.out.print(" "+a[z]);
+		
+	}
+	
+	
+		
+		
+	}
+}

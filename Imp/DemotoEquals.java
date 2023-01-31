@@ -1,0 +1,58 @@
+class Demo
+{
+	private int x;
+	private double y;
+	private Integer z;
+	private String name;
+	private String id;
+	
+	public  Demo(int x, double y, Integer z, String name, String id)
+	{
+		this.x=x;
+		this.y=y;
+		this.z=z;
+		this.name=name;
+		this.id=id;
+	}
+	@Override
+	public boolean equals(Object o)
+	{
+		if(o instanceof Demo)
+		{
+			Demo e1=(Demo)o;
+			if(
+			this.x==e1.x && 
+			this.y==e1.y &&
+			this.z.equals(e1.z) && 
+			this.name.equals(e1.name) &&
+			this.id.equals(e1.id)
+			)
+			{
+				return true;
+			}
+		}return false;
+	}	
+	
+}
+
+class DemotoEquals
+{
+	public static void main(String... rgs)
+	{
+		Demo d1= new Demo(12,23.23,32,"AKSHAY","production");
+		Demo d2= new Demo(13,34.34,33,"AKSHAYaa","quality");
+		Demo d3= new Demo(14,45.56,34,"AKSH","maint.");
+		Demo d4= new Demo(12,23.23,32,"AKSHAY","production");
+		
+		System.out.println(d1);
+		System.out.println(d2);
+		System.out.println(d3);
+		System.out.println(d4);
+		
+		System.out.println(d1==d4);
+		System.out.println(d1.equals(d4));
+		
+		
+	}
+}
+

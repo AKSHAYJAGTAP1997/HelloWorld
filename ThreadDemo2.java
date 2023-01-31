@@ -1,0 +1,87 @@
+class AddThread extends Thread
+{
+public void run()
+{System.out.println("	-->"+Thread.currentThread().getName() +"add started"); 
+ int sum=0;
+ for(int i=0; i<20;i++)
+ {
+	sum+=i;
+ }System.out.println("	-->"+Thread.currentThread().getName()+"add ended"+sum); 
+}	
+	
+}
+
+class MulThread extends Thread
+{
+	MulThread(String name)
+	{
+		super(name);
+		
+	}
+	MulThread(){}
+public void run()
+{System.out.println("	-->"+Thread.currentThread().getName()+"stared mul");
+int mul=1; 
+ for(int i=1; i<20;i++)
+ {
+	mul*=i;
+ }System.out.println("	-->"+Thread.currentThread().getName()+"mul ended"+mul); 
+}	
+	
+}
+
+
+/*class EvenAddThread extends Thread 
+{
+//System.out.println("	-->"+Thread.currentThread().getName()+"stared evenAdd");	
+public void run()
+{System.out.println("	-->"+Thread.currentThread().getName()+" started evenadd");
+	int even=0;
+for(int i=1;i%2==0 && i<20;i++)
+{
+even+=i;	
+}System.out.println("	-->"+Thread.currentThread().getName()+" ended evenadd"+even);
+}
+
+}*/
+
+
+
+class ThreadDemo2
+{
+	public static void main (String[] args)
+	{
+		System.out.println(Thread.currentThread().getName()+"started");//main or Main
+		
+	AddThread t1 = new AddThread();//if Mythread  class has thread class in its hierarchy then object of mythread class is cnsider as thread
+	                             // new state
+     t1.setName("Add thread");	
+	 MulThread	t2=new MulThread("t2");
+t2.setName("Mul Thead");
+
+ Thread	t3=new Thread(){
+public void run()
+{
+	System.out.println("	-->"+Thread.currentThread().getName()+" started evenadd");
+	int even=0;
+for(int i=1;i<=20;i++)
+{
+	if(i%2==0){
+	even+=i;	}
+	
+}System.out.println(even+"-->"+Thread.currentThread().getName()+" started evenadd");//System.out.println(even);
+}//System.out.println(even);	 
+ };
+
+t3.setName("Evenadd Thead ");
+System.out.println(Thread.currentThread().getName()+"staring thread");
+
+
+t1.start();
+t2.start();
+t3.start();
+System.out.println(Thread.currentThread().getName()+"ended");
+
+}
+
+}

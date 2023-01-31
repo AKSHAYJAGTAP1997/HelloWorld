@@ -1,0 +1,17 @@
+import java.util.*;
+
+class aaa
+{
+	public static void main(String args[])
+	{
+		String as="akshayaniljagtap";
+		for(int i=0;i<as.length();i++)
+		{
+			for( int j=0;j<=i;j++)
+			{
+				System.out.print(as.charAt(j));
+			}
+			System.out.println();
+		}
+	}
+	}

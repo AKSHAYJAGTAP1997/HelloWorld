@@ -1,0 +1,34 @@
+package packageB;
+public class D
+{
+	public static double w=12.23;
+	//protected static double x=23.34;
+	//static double  y=34.45;
+	
+	public static void m5()
+	{
+		System.out.println("team 2 kh");
+	}
+	
+	/*protected static void m6()
+	{
+		System.out.println("team 3 kh");
+	}
+	static void m7()
+	{
+		System.out.println("team 4 kh");
+	}*/
+	
+	public static void main(String[] Akshay)
+	{
+		System.out.println(w);
+		//System.out.println(x);
+		//System.out.println(y);
+		m5();
+		//m6();
+		//m7();
+	}
+}
+
+		
+		

@@ -1,0 +1,313 @@
+import javax.swing.*;
+import java.awt.*;
+import javax.swing.JOptionPane;
+
+public class LinkedList {
+   public int value;              // value of element
+   public LinkedList next;        // reference to next
+   private LinkedList head ;
+
+   // constructor
+   public LinkedList() {
+      // initialize list head
+      head = null;
+
+   }
+
+   // constructor
+   public LinkedList(int n, LinkedList ln) {
+      value = n;
+      next = ln;
+   }
+
+   public void Add( int num ) {
+
+      head = new LinkedList(num, head);
+   }
+
+   public void DisplayLL(  ) {
+      LinkedList NodeRef ;
+      NodeRef = head;
+      String result = "" ;
+
+      // list all entries
+      while (NodeRef != null) {
+         result = result + NodeRef.value + " " ;
+         NodeRef = NodeRef.next;
+      }
+
+      JOptionPane.showMessageDialog( null ,
+                   result ,
+                   "Linked List Entires " ,
+                   JOptionPane.PLAIN_MESSAGE ) ;
+   }
+
+   /** **********************************************
+    * The Remove function searches for a node
+    * with Num as its value. The node, if found, is
+    * deleted from the list and from memory.
+    * 1. Check to see if the Linked list has entries.
+    *    - If the Linked list is empty, then there is no
+    *      further processing required.
+    * 2. Check if the value we are seeking is in the first
+    *    node in the Linked list.
+    *    - Delete that node by making the value of next the
+    *      new head.
+    * 3. Start iterating through the Linked list until the
+    *    value we are seeking is found.
+    *    - Delete that node by removing its reference from
+    *      the link.
+    *
+    ************************************************ */
+
+   public boolean Remove(int num) {
+      LinkedList NodeRef, PreviousNode = null;
+      boolean found = false ;
+
+	/** If the list is empty, do nothing.  */
+      if ( !(head == null) ) {
+         NodeRef = head ;
+
+	 /** Determine if the first node is the one. */
+         if ( NodeRef.value == num ) {
+            head = NodeRef.next;
+            found = true ;
+         }
+         else {
+            /** Initialize NodeRef to head of list */
+            NodeRef = head;
+
+            /** *************************************
+             * Skip all nodes whose value member is
+             * not equal to num.
+             * *************************************** */
+
+            while (NodeRef != null  ) {
+               if ( NodeRef.value != num ) {
+                  PreviousNode = NodeRef;
+                  NodeRef = NodeRef.next;
+               }
+               else {
+
+                  /** *********************************************
+                   * Link the previous node to the node after
+                   * NodeRef, then delete NodeRef.
+                   *********************************************** */
+
+                  PreviousNode.next = NodeRef.next;
+                  found = true ;
+                  break ;
+               }
+            }
+         }  /** End of if-then-else   */
+      }
+
+      return found ;
+   }
+
+   /** **************************************************
+    *  Method: checkDigit( String strVal )
+    *    1- Make sure that the data entered is a digit
+    *       - check each character to ensure it is a digit
+    ******************************************************/
+   public boolean  checkDigit( String strVal ) {
+
+       int strLength = 0;
+       boolean notDig = true;
+
+       strLength = strVal.length();
+
+       for (int ii = 0; ii < strLength; ii++) {
+          if (!Character.isDigit(strVal.charAt(ii)) ) {
+             notDig = false;
+             break;
+          }
+       }
+
+       return notDig;
+   }
+
+   /** ***********************************************
+    *  Method: showIn( String mess , String title )
+    *    1- The purpose of this method is to display the
+    *       JOptionPane - show Input Dialog.
+    *
+    **************************************************/
+   public String showIn( String mess , String title ) {
+      String ret  ;
+
+      ret = JOptionPane.showInputDialog( null ,
+                   mess ,
+                   title ,
+                   JOptionPane.PLAIN_MESSAGE ) ;
+
+      return ret ;
+   }
+
+   /** **********************************************
+    * Method: menu()
+    *
+    * Purpose: displays the user options
+    *   1 - Add an integer
+    *   2 - Delete an integer from the of list
+    *   3 - Display the list
+    *   4 - Exit
+    *
+    ************************************************ */
+   public void menu() {
+      boolean cont = true , remCont = true ;
+      String menu, result2 ;
+
+      String number ;   // first string entered by user
+
+      int number1 ;       // number to process in the list
+      int a , b , arr[] = new int[ 250 ] ;
+
+      /** **************************************
+       *  Add some entries to list.
+       *****************************************/
+      Add(10);
+      Add(99);
+      Add(21);
+      Add(73);
+      Add(110);
+      Add(11);
+      Add(150);
+      Add(215);
+      Add(33);
+      Add(81);
+      Add(44);
+      Add(55);
+      Add(67);
+
+      menu  =         "                                         \n" ;
+      menu  = menu  + "    Linked List Options                  \n" ;
+      menu  = menu  + "                                         \n" ;
+      menu  = menu  + "  1 - Add an integer                      \n" ;
+      menu  = menu  + "  2 - Delete an integer from the of list  \n" ;
+      menu  = menu  + "  3 - Display the list                   \n" ;
+      menu  = menu  + "                                         \n" ;
+      menu  = menu  + "  4 - Exit                               \n" ;
+      menu  = menu  + "                                         \n" ;
+      menu  = menu  + " Select one of the options from above     \n" ;
+
+      while ( cont ) {
+
+         // read in first number from user
+         number =  showIn( menu ,  "Linked List Options " ) ;
+
+         if ( number == null )  {
+            break ;  // The user selected the cancel button
+         }
+         if ( number.equals( "" ) ) {
+            number1 =  99  ;
+         }
+         else {
+            if ( checkDigit( number ) ) {
+               number1 =  Integer.parseInt( number ) ;
+            }
+            else {
+               number1 =  99 ;
+            }
+         }
+
+         switch ( number1 ) {
+            case 1 : // Add an integer
+               remCont = true ;
+
+               while ( remCont ) {
+               // read in the number from user
+                  number  =  showIn(
+                      "Please enter the number you want to add to the list." ,
+                      "Add a number " ) ;
+
+                  if ( number == null )  {
+                     remCont = false ;
+                     break ;
+                  }
+
+                  if ( !number.equals( "" ) )  {
+                     if ( checkDigit( number ) ) {
+                        Add( Integer.parseInt( number ) ) ;
+                     }
+                     else {
+                        JOptionPane.showMessageDialog(  null, "The letter " +
+                           number + " is not a valid option." ,
+                              "Letter is not valid option" ,
+                              JOptionPane.ERROR_MESSAGE ) ;
+                     }
+                  }
+                  else {
+                     JOptionPane.showMessageDialog(  null,
+                           " Please enter a valid option." ,
+                              "Blank not valid" ,
+                              JOptionPane.ERROR_MESSAGE ) ;
+                  }
+               }
+            break ;
+            case 2 : // Delete an integer from the of list
+               while ( remCont ) {
+                  remCont = true ;
+                  number =  showIn (
+                      "Please enter the number you want to from the list." ,
+                      "Delete number" ) ;
+
+                  if ( number == null )  {
+                     remCont = false ;
+                     break ;
+                  }
+
+                  if ( !number.equals( "" ) )  {
+                     if ( checkDigit( number ) ) {
+                        if (Remove( Integer.parseInt( number ) ) ) {
+                           JOptionPane.showMessageDialog(  null, "The number " +
+                              number + " was found and deleted from the list" ,
+                              "Number found" ,
+                                 JOptionPane.PLAIN_MESSAGE ) ;
+                        }
+                        else {
+                           JOptionPane.showMessageDialog(  null, "The number " +
+                              number + " was not found in the list" ,
+                                 "Number not found" ,
+                                     JOptionPane.ERROR_MESSAGE ) ;
+                        }
+                     }
+                    else {
+                       JOptionPane.showMessageDialog(  null, "The letter " +
+                           number + " is not a number." ,
+                              "Letter is not valid number" ,
+                                 JOptionPane.ERROR_MESSAGE ) ;
+                     }
+                  }
+               }
+            break ;
+            case  3 : // Display
+               DisplayLL() ;
+            break ;
+            case  4 : // Exit
+               cont = false ;
+            break ;
+            default:
+               JOptionPane.showMessageDialog( null,  "The option "+ number + " you selected is not valid.\n" + "Please enter a valid option from above." + "Invalis Option selected "+JOptionPane.INFORMATION_MESSAGE);
+            break ;
+         }
+      }
+
+   }
+   /** ***********************************************
+    *  Method: main(String args[])
+    *  1- This is the entry point for the Linked List
+    *     application
+    *  2- This is the method that Java calls when the
+    *     this application is run.
+    **************************************************/
+   public static void main(String args[]) {
+
+      LinkedList pp = new LinkedList() ;
+
+      // add some entries to list
+      pp.menu() ;
+
+      System.exit( 0 ) ;
+   }
+}

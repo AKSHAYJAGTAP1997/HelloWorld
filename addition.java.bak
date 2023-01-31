@@ -1,0 +1,11 @@
+class  addition
+{
+public static void main(String args[])
+{
+	int n1,n2,sum;
+	n1=250;
+	n2=249;
+	sum=n1+n2;
+	System.out.println("sum is equal to...."+sum);
+}
+}

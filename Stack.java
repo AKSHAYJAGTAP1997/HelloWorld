@@ -1,0 +1,26 @@
+class Stack1
+{
+	static void m1()
+	{
+		System.out.println("hello");
+		m2();
+	}
+	
+	 static void m2()
+	{
+		System.out.println("AKSHAY");
+		m1();
+	}
+}
+
+class  Stack
+{	
+		public static void main(String[] akshay)
+		{
+			Stack1.m1();
+		}
+	
+}
+
+
+

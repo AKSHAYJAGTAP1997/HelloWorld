@@ -1,0 +1,52 @@
+import java.lang.reflect.*;
+
+class A
+{
+	int x,y;
+	private int z;
+	
+	A()
+	{
+		System.out.println("constructor invoked:");
+		
+	}
+	
+	private void m1()
+	{
+		System.out.println("m1 invoked");
+	}
+	
+	private void m2(int z)
+	{
+		System.out.println("me invoked");
+	}
+	
+	void m3()
+	{
+		System.out.println("m3 invoked");
+    }
+}
+
+
+
+class Reflection1 
+
+{
+	
+	public static void main(String[] args) throws  ClassNotFoundException
+	{
+		Class aj=Class.forName("A");
+		
+		Field[] ax=aj.getDeclaredFields();
+		for(Field a:ax)
+			{
+				System.out.println(a.getName());
+			}
+			
+		
+		
+	}
+	
+}
+
+

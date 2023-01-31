@@ -1,0 +1,10 @@
+package Akshay;
+
+class Parent extends Parent1
+{
+	public void m1()
+	{
+		System.out.println("child class method");
+	}
+}
+

@@ -1,0 +1,87 @@
+QUE.1 class TestApp {
+    public static void main(String[] args) {
+        for (int index = 0; 1; index++) {
+            System.out.println("Welcome");
+            break;
+        }
+    }
+}
+A. Welcome
+B. Welcome Welcome
+C. Type mismatch error
+D. Run infinite-times
+
+answer:- C.
+
+QUE.2 class TestApp {
+    public static void main(String[] args) {
+        for (int index = 0; true; index++) {
+            System.out.println("Welcome");
+            break;
+        }
+    }
+}
+A. Welcome
+B. None
+C. Type mismatch error
+D. Run infinite times
+
+ANSWER:- A
+
+QUE3. class TestApp {
+
+    String args[] = { "1", "2" };
+
+    public static void main(String args[]) {
+        if (args.length > 0)
+            System.out.println(args.length);
+    }
+}
+A. The program compiles but prints nothing.
+B. The program fails to compile.
+C. The program compiles and prints 2.
+D. The program compiles and prints 0.
+
+ANSWER:-A
+
+  QUE4.
+  
+  class TestApp {
+
+    public static void main() {
+        int odd = 1;
+        if (odd) {
+            System.out.println("odd");
+        } else {
+            System.out.println("even");
+        }
+    }
+}
+A. odd
+B. even
+C. Run-time exception
+D. Type mismatch error
+
+ANSWER:-D
+
+
+QUE5. class TestApp {
+
+    public static void main(String args[]) {
+        System.out.println(test());
+    }
+
+    static float test() {
+        static float x = 0.0;
+        return ++x;
+    }
+}
+A. 0.0
+B. 1
+C. 1.0
+D. Compile time error
+
+
+
+
+

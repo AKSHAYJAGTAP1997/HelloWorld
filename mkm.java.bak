@@ -1,0 +1,11 @@
+import java.util.*;
+class mkm
+{
+	public static void main(String args[])
+	{
+		float f=(1f/4)*10;
+		int i=Math.round(f);
+		System.out.println(i);
+	}
+}
+

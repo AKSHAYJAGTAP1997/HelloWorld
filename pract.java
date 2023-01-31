@@ -1,0 +1,236 @@
+import java.util.*;
+
+/*class pract
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("ENTER NUM1");
+		double a=sc.nextDouble();
+		System.out.println("ENTER NUM2.");
+		double b=sc.nextDouble();
+		
+		double s= a/b;
+		
+		System.out.println("if num1 is divided by num2 the result is  ="+s);
+		
+		double p=1/s;
+		System.out.println("if num2 is divided by num1 then result is ="+p);
+	}
+}
+
+		
+		*/
+		
+				
+	/*	class pract
+		{
+			public static void main(String args[])
+			
+			{
+				Scanner sc=new Scanner (System.in);
+				System.out.println("ENTER NUMBER1");
+				double a =sc.nextDouble();
+				System.out.println("enter num2");
+				double b =sc.nextDouble();
+				System.out.println("enter num3");
+				double c = sc.nextDouble();
+				if ( a<b && a<c)
+				{
+					System.out.println(" smaleest num is ="+a);
+				}
+				else if (b<a && b<c)
+				{
+					System.out.println("Smalest num is = "+b);
+				}
+				else if (c<a && c<b)
+				{
+					System.out.println("Smallest num is ="+c);
+				}
+				else
+				{
+					System.out.println("num is no small");
+				}
+			}
+		}
+		
+		
+		
+		*/
+		
+	/*		class pract 
+			{
+public static void main(String args[])
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println(" ENTER NUM ");
+	int b=sc.nextInt();
+	int a=1;
+	for( int i=1;i<=b;i++)
+	{
+		a=a*i;
+	}
+	System.out.println(" factorial of given num ="+a);
+}
+			}
+*/			
+	
+/*class pract
+{
+public static void main(String arg[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("ENTER YEAR");
+int a=sc.nextInt();
+if( a%4==0)
+{
+ System.out.println("GIVEN YEAR IS LEAP");
+}
+else
+{
+System.out.println("GIVEN YEAR IS NOT LEAP");
+}
+}
+}
+	*/
+	
+	/*class pract
+	{
+		public static void main(String args[])
+		{
+			Scanner sc=new Scanner(System.in);
+			int i=sc.nextInt();
+             int b=0;			//  nt remainder = number % 10;  
+             System.out.println(" "+i);                                                            //reverse = reverse * 10 + remainder;  
+                                                                         //umber = number/10;  
+			while(i!=0)
+			{				
+			
+			int a=i%10;
+			 b=b*10+a;
+			i= i/10;
+			
+		}
+		System.out.println(" "+b);
+	}
+	
+	}
+	
+
+
+
+*/
+
+
+/*class pract
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println(" ENTER NUMBER WHOSE SERIES IS PRINTED");
+		int a=sc.nextInt();
+		for (int i=1;i<=10;i++)
+		{
+			int result= a*i;
+			System.out.println(" "+a+" x "+i+" = "+result);
+		}
+		
+	}
+}*/
+
+/*class pract 
+{
+	public static void main(String args[])
+	{
+		for(int i=1;i<=4;i++)
+		{
+			System.out.println("==========");
+		}
+		System.out.println("    ^|^    ");
+		System.out.println(" ^^\ | /^^");
+		System.out.println(" ^^-\|/-^^");
+		System.out.println(" ^^ /|\ ^^");
+		System.out.println(" ^^/ | \^^");
+		System.out.println("    ^|^    ");
+		for(int j=1;j<=4;j++)
+		{
+			System.out.println("===============");
+		}
+	}
+}
+*/
+
+/*class pract
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER NUM1");
+		String x=sc.next();
+		System.out.println("ENTER NUM2");
+		String y=sc.next();
+		int n1=Integer.parseInt(x,2);
+		int n2=Integer.parseInt(y,2);
+		int n3=n1+n2;
+		System.out.println("n1 :"+Integer.toBinaryString(n1));
+		System.out.println("n2 :"+Integer.toBinaryString(n2));
+		System.out.println("n3=n1+n2 :"+Integer.toBinaryString(n3));
+	}
+}
+
+	*/
+
+class pract
+{
+public static void main	(String args[])
+{
+	int i= 5 ;
+	while (i>=1)
+	{
+		{
+			for (int j=i;j>=1;j--)
+			{
+				System.out.print("*");
+			}System.out.println();
+	i--;
+			
+		}
+		
+	}
+}
+
+
+}
+
+#shell script to find average of n numbers
+  
+
+echo "Enter Size(N)"
+read N
+
+i=1
+sum=0
+
+echo "Enter Numbers"
+while [ $i -le $N ]
+do
+  read num               #get number
+  sum=$((sum + num))     #sum+=num
+  i=$((i + 1))
+done
+
+avg=$(echo $sum / $N | bc -l)
+
+echo $avg
+
+
+
+
+
+
+
+
+
+		
+			
+			

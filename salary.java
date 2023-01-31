@@ -1,0 +1,48 @@
+class Salary
+{
+	
+	double basic;
+	double da;
+	double incent;
+	double salary;
+	int empid;
+	int hour;
+	String sp;
+	static String department="PRODUCTION";
+	
+	void setdata( double bas,double d,double inc, int emp,String s)
+	{
+		this.basic=bas;
+		this.da=((d/100)*bas);
+		this.incent=((inc/100)*bas);
+		//System.out.println("incent"+incent);
+		this.salary=(basic+da+incent);
+		this.empid=emp;
+		this.sp=s;
+		
+		
+	}
+	void getdata()
+	{
+		System.out.println("employee id ="+empid);
+		System.out.println("EMPLOYEE NAME="+sp);
+		System.out.println("gross salary is ="+salary);
+		System.out.println("DEPARTMENT  BELONG TO EMPLOYEE IS "+department);
+		
+		
+	}
+	public static void main(String args[])
+	{
+	Salary s1=new Salary();
+	Salary s2=new Salary();
+	s1.setdata(15000,10,7,100,"AMIT");
+	s1.getdata();
+	s2.department="account";
+	s2.setdata(20000,10,7,101,"AMAN");
+	s2.getdata();
+	
+	}
+}
+
+	
+		

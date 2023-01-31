@@ -1,0 +1,23 @@
+public class Dog// parent class
+{
+    public void m1()
+    {
+        System.out.println("woof!");
+    }
+
+    public static void main(String[] args)
+    {
+        Dog d = new Dog();//creating object of class itself
+        d.m1();
+        Dog d1 = new Beagle();//  create object of beagle reffering Dog class
+        d1.m1();//call to instance method from beagle class
+    }
+}
+
+class Beagle extends Dog//child class
+{
+    public void m1()
+    {
+        System.out.println("arf arf");
+    }
+}

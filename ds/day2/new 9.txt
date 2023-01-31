@@ -1,0 +1,22 @@
+  string strresponse = string.Empty;
+ 
+ var user = db.Users.Where(a => a.Email == model.Email && a.Password == model.Password).FirstOrDefault();
+            if (user != null)
+            {
+                //user active
+                if (user.UserStatus == 1)
+                {
+                    FormsAuthentication.SetAuthCookie(user.Email, user.Password);
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    strresponse = "Your Account has not been activated.Please connect to admin";
+                }
+            }
+            else
+            {
+                strresponse = "Username or password is incorrect.Please try again!";
+            }
+            ViewBag.Message = strresponse;
+            return View();

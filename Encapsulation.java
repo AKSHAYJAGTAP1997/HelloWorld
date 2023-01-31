@@ -1,0 +1,76 @@
+class Employee
+{
+	private String name;
+	private int age;
+	private double salary;
+	private String gender;
+	
+	public Employee(String name,int age,double salary,String gender)
+	{
+		this.name=name;
+		this.age=age;
+		this.salary=salary;
+		this.gender=gender;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+	public void setName(String name){
+      this.name = name;
+	}
+	public int getAge(){
+		return this.age;
+	}
+	public void setAge(int age){
+      this.age = age;
+	}
+	public double getSalary(){
+		return this.salary;
+	}
+	public void setSalary(double salary){
+      this.salary = salary;
+	}
+	public  String getGender(){
+		return this.gender;
+	}
+	public void setGender(String gender){
+      this.gender = gender;
+	}
+}
+
+class Encapsulation
+{
+	public static void main(String[] args)
+	{
+		Employee e1 = new Employee("AKSHAY",23, 70000.00,"MALE");
+		
+		System.out.println(e1.getName());
+		System.out.println(e1.getAge());
+		System.out.println(e1.getSalary());
+		System.out.println(e1.getGender());
+		
+		// tochange in information call set methods
+		
+		e1.setName("AKSHAYA");
+		e1.setAge(24);
+		e1.setSalary(24000.00);
+		e1.setGender("FEMALE");
+		
+		//to get modified information ,call get variable
+		
+		System.out.println(e1.getName());
+		System.out.println(e1.getAge());
+		System.out.println(e1.getSalary());
+		System.out.println(e1.getGender());
+	}
+}
+
+
+		
+		
+		
+	
+
+
+	

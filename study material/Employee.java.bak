@@ -1,0 +1,66 @@
+class Employee implements Comparable<Employee> {
+
+	private Integer employeeId;
+	private String name;
+	private String gender;
+	private Double salary;
+	
+	public Employee(String name,Integer age,String gender,String adhar,int id)
+	{
+		this.name=name;
+		this.age=age;
+		this.gender=gender;
+		this.adhar=adhar;
+     	this.id=id;
+	}
+	//get and set methods
+	
+	//toString
+	@Override
+	public String toString(){
+		return "Employee:"+this.id+", "+this.name+", "+this.gender+", "+this.age;
+	}
+	
+	
+	//equals
+	@Override
+	public boolean equals(Object o)
+	{
+		if(o instanceof Demo)
+		{
+			Demo e1=(Demo)o;
+			if(
+			this.name.equals(e1.name) &&
+			this.age.equals(e1.age) &&
+			this.adhar.equals(e1.adhar) &&
+			this.gender.equals(e1.gender) &&
+			this.id==e1.id
+		)
+		{
+			return true;
+		}
+		} return false;
+	}
+	
+	
+	//hashCode
+	@Override
+	public int hashCode(){
+		System.out.println("hashCode invoked!!!!");
+		int prime = 23;
+		prime = prime + prime*this.name.hashCode();
+		prime =(int)(prime*id);
+		//prime = prime + this.id.hashCode();
+		prime = prime + prime*this.gender.hashCode();
+		prime = prime + prime*this.age.hashCode();
+		prime = prime + prime*this.adhar.hashCode();
+		
+		return prime;
+	}
+	@Override
+      public int compareTo(Demo e)	{
+		 return this.id - e.id ;
+		 //return this.id.compareTo(e.id);  if int is wrapper class
+	  }
+	
+}

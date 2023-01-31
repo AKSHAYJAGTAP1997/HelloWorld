@@ -1,0 +1,130 @@
+class Person implements Comparable<Person>
+{
+	private String name;
+	private String adhar;
+	private int age;
+	private String gender;
+
+
+Person(String name, String adhar, int age, String gender)
+{
+
+this.name=name;
+this.age=age;
+this.gender=gender;
+this.adhar=adhar;
+}
+
+	//get and set methods
+	public int getAge()
+	{
+		return this.age;
+	}
+	public String getName()
+	{
+		return this.name;
+	}
+	public String getGender()
+	{
+		return this.gender;
+	}
+	public String getAdhar()
+	{
+		return this.adhar;
+	}
+	
+	public void setAge(int age)
+	{
+		this.age = age;
+	}
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	public void setAdhar(String adhar)
+	{
+		this.adhar = adhar;
+	}
+	public void setGender(String gender)
+	{
+		this.gender = gender;
+	}
+	
+	
+	// tostring method
+	@Override
+	public String toString()
+	{
+		return this.name+" ,"+this.age+" ,"+this.adhar+" , "+this.gender;
+		
+		
+	}
+	
+	
+	
+	
+	
+	//equals method
+	
+	public boolean equals(Object o)
+	{ 
+	System.out.println("equals method invoked");
+	
+	if(o instanceof Person)
+	{
+		Person p =(Person) o;
+		if (
+		this.name.equals(p.name) &&
+		this.adhar.equals(p.adhar) &&
+		this.gender.equals(p.gender) &&
+		this.age==p.age
+		)
+		{
+		return true;	
+		}
+		}return false;
+	}
+	
+	//hashcode
+	public int hashCode()
+	{
+		System.out.println("hashcode invked");
+		
+		int ak=20;
+		
+		ak=ak+ ak*this.name.hashCode();
+		ak=ak+ ak*this.gender.hashCode();
+		ak=ak+ ak*this.adhar.hashCode();
+		ak=(int)(ak*age);
+             return ak;
+
+	}
+	
+	@Override
+	public int compareTo(Person p){
+		System.out.println("sorted acoding to name");
+	return this.name.compareTo(p.name);
+	}
+	
+	/*public static void main(String... args)
+	{
+		Person p1  = new Person("AKSHAY","789AAKK",24,"MALE");
+	Person p2  = new Person("ABHAY","909LLKK",29,"MALE");
+	Person p3 = new Person("AKSHAR","1234RREE",25,"MALE");
+	Person p4  = new Person("AKSHAY","789AAKK",24,"MALE");
+	
+	System.out.println(p1);
+System.out.println(p2);
+System.out.println(p3);
+System.out.println(p4);
+System.out.println(p1==p4);
+System.out.println(p1.equals(p4));	
+	
+	}
+	
+*/	
+	
+	
+	
+}
+

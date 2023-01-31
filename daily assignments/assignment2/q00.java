@@ -1,0 +1,38 @@
+/*class p
+{
+	public static void main(String args[])
+	{
+		String a1= args[0];
+		String a2= args[1];
+		String a3= args[2];
+		
+		
+		short i =Short.parseShort(a1);
+		short j=Short.parseShort(a2);
+		short k=Short.parseShort(a3);
+		
+		System.out.println("ARGUMENT IS....="+i);
+		System.out.println(" . "+j);
+		System.out.println(" ."+k);
+	}
+}*/
+		
+		 class q00
+ {
+	 public static void main(String args[])
+	 {
+		
+		System.out.println("AMERICAN FLAG");
+		
+		 for(int i=0; i<7;i++)
+			 
+			 {
+			 				 System.out.println(" * * * * ================ ");
+			 }
+			 for (int j=0;j<9;j++)
+			 {
+				 System.out.println(" ========================");
+			 }
+	 }
+			
+ } 

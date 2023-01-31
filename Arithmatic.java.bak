@@ -1,0 +1,19 @@
+class Arithmatic
+{
+	public static void main(String[] args)
+	{
+		System.out.println("before");
+		try {
+			int i=1/0;
+					System.out.println("aaaaaaa");
+		}
+		finally{
+					System.out.println("realease code");
+		}
+				System.out.println("after");
+	}
+	
+}
+
+
+			

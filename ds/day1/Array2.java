@@ -1,0 +1,45 @@
+// insert element without method
+
+import java.util.*;
+
+class Array2
+{
+	public static void main(String[] args)
+	{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("number of element");
+	int n=sc.nextInt();
+	int arr[]=new int[5];
+	System.out.println("enter elements of array");
+	for(int i=0;i<n;i++)
+	{
+		arr[i]=sc.nextInt();
+		
+	}
+	
+	
+	//System.out.println(" elements of array  are");
+	
+	int val=10;
+int index=2;
+int j=0;
+int k=0;
+
+int array[]=new int [arr.length+1];
+for (k=0;k<array.length;k++)
+{
+	if(k==index)
+	{
+		array[k]=val;
+	}
+	else
+	{
+		array[k]=arr[j];
+		j++;
+	}
+}
+
+System.out.println(Arrays.toString(array));
+	}
+}
+

@@ -1,0 +1,34 @@
+class Ap
+{
+	static void m1(double x,int... a)
+	{
+		int as=0;
+		for(int i=0;i<a.length;i++)
+		{
+			as=as+a[i];
+		}
+		System.out.println(as);
+	}
+	static void m2(double y,double... b)
+	{
+		double ab=0;
+		for(int j=0;j<b.length;j++)
+		{
+			ab=ab-b[j];
+		}
+		System.out.println(ab);
+	}
+	
+	public static void main(String... Akshay)
+	{
+		//Ap.m1();
+		Ap.m1(1,2,3);
+		Ap.m1(1,2,3,4);
+		System.out.println("  ");
+		//Ap.m2();
+		Ap.m2(12.23,23.34);
+		
+		
+	}
+}
+
